@@ -3,7 +3,7 @@ import home2 from "../images/home2.svg";
 
 const HomeHero = () => {
 	return (
-		<div className='mt-6 md:mt-10 flex flex-col md:flex-row md:px-6'>
+		<div className='mt-6 md:mt-10 flex flex-col md:flex-row md:px-6 w-11/12 mx-auto'>
 			<div className='xl:w-1/3 mx-auto'>
 				<div className='text-center text-5xl md:text-6xl md:text-left lg:mt-12 xl:mt-24'>
 					<span className='block font-bold mb-3 md:mb-4 leading-hero'>

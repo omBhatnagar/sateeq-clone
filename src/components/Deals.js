@@ -84,7 +84,7 @@ const Deals = () => {
 	];
 
 	return (
-		<div className='my-10'>
+		<div className='my-10 w-11/12 mx-auto'>
 			<div>
 				<h1 className='text-4xl text-center font-bold'>Latest Deals</h1>
 				<p className='text-center text-hero-p text-lg mt-2'>

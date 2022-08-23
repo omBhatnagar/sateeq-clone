@@ -1,5 +1,6 @@
 import Cta from "../components/Cta";
 import Deals from "../components/Deals";
+import Faqs from "../components/Faqs";
 import HomeHero from "../components/HomeHero";
 import Invested from "../components/Invested";
 import Media from "../components/Media";
@@ -14,6 +15,7 @@ const HomePage = () => {
 			<Deals />
 			<Media />
 			<Invested />
+			<Faqs />
 			<Cta />
 		</Layout>
 	);

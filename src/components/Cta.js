@@ -24,7 +24,7 @@ const Cta = () => {
 
 	return (
 		<>
-			<div className='flex flex-col justify-between md:flex-row md:w-5/6 md:mx-auto items-center gap-4 my-12'>
+			<div className='flex flex-col justify-between w-11/12 mx-auto md:flex-row md:w-5/6 md:mx-auto items-center gap-4 my-12'>
 				{data?.map((item) => (
 					<CtaCard img={item.img} desc={item.desc} bgBlue={item.bgBlue} />
 				))}

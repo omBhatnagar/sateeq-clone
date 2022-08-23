@@ -5,7 +5,7 @@ import et from "../images/et.svg";
 
 const Media = () => {
 	return (
-		<div className='my-32'>
+		<div className='my-32 w-11/12 mx-auto'>
 			<div>
 				<h1 className='text-3xl text-center font-bold text-media-grey'>
 					In the Media

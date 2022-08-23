@@ -23,7 +23,7 @@ const Invested = () => {
 	];
 
 	return (
-		<div className='flex flex-col md:flex-row md:justify-around md:items-center md:rounded-3xl bg-gradient-to-r from-grad-b to-testimonial-lb w-full mx-auto px-4 py-28'>
+		<div className='flex flex-col md:flex-row md:justify-around md:items-center md:rounded-3xl lg:rounded-[3rem] bg-gradient-to-r from-grad-b to-testimonial-lb w-full mx-auto px-4 md:w-[97%] mx-auto'>
 			<div className='md:w-1/3'>
 				<h1 className='text-center text-white text-xl md:text-left md:text-3xl font-bold mb-4'>
 					If you would have invested
@@ -40,7 +40,7 @@ const Invested = () => {
 					</button>
 				</div>
 			</div>
-			<div className='flex flex-col md:flex-row md:flex-wrap justify-center md:justify-between items-center gap-5 md:w-1/2 lg:w-5/12'>
+			<div className='flex flex-col md:flex-row md:flex-wrap justify-center md:justify-between items-center gap-5 md:w-1/2 lg:w-5/12 py-16'>
 				{data?.map((item) => (
 					<InvestedCards
 						img={item.img}
@@ -48,6 +48,9 @@ const Invested = () => {
 						isFlexCol={item.isFlexCol}
 					/>
 				))}
+				<div className='w-full text-[hsla(0,0%,100%,.6)] text-center pt-6'>
+					*In their first funding round
+				</div>
 			</div>
 		</div>
 	);

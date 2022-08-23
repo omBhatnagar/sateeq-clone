@@ -13,8 +13,8 @@ const Testimonials = () => {
 	];
 
 	return (
-		<div className='bg-gradient-to-r from-grad-b to-testimonial-lb w-full mx-auto pb-10'>
-			<div className='w-5/6 mx-auto pt-6'>
+		<div className='bg-gradient-to-r from-grad-b to-testimonial-lb w-full mx-auto pb-10 w-11/12 mx-auto'>
+			<div className='w-5/6 mx-auto pt-16'>
 				<h1 className='text-center text-white text-2xl font-bold'>
 					Trusted & backed by
 				</h1>
@@ -22,14 +22,16 @@ const Testimonials = () => {
 					{" "}
 					Collaboration with highly reputed Investors in the market{" "}
 				</p>
-				{data?.map((item, index) => (
-					<TestimonialCard
-						img={item.img}
-						profImg={item.profImg}
-						name={item.name}
-						des={item.des}
-					/>
-				))}
+				<marquee className='py-8'>
+					{data?.map((item, index) => (
+						<TestimonialCard
+							img={item.img}
+							profImg={item.profImg}
+							name={item.name}
+							des={item.des}
+						/>
+					))}
+				</marquee>
 			</div>
 		</div>
 	);

@@ -10,7 +10,7 @@ const Layout = ({ children, className, theme, accent }) => {
 			"bg-white": theme === "light",
 		},
 		className,
-		"sm:py-20 w-11/12 mx-auto overflow-x-hidden",
+		"sm:py-20 overflow-x-hidden",
 	);
 	return (
 		<div className='font-inter'>

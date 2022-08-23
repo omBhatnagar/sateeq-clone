@@ -2,12 +2,12 @@ import "./testimonialCard.css";
 
 const TestimonialCard = ({ img, profImg, name, des }) => {
 	return (
-		<section class='flex gap-4 bg-white p-1 pr-8 rounded-lg w-fit'>
-			<aside>
+		<section class='flex gap-4 bg-white p-1 pr-8 rounded-lg w-1/3 mt-7'>
+			<div className='w-1/4'>
 				<img src={profImg} alt='profile' />
-			</aside>
+			</div>
 			<article class='relative'>
-				<div class='flex justify-center w-full absolute'>
+				<div class='flex justify-center w-full absolute w-1/2'>
 					<img class='topimage' src={img} alt='top' />
 				</div>
 				<div class='relative top-[40%]'>
