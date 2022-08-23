@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import cx from "classnames";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const Layout = ({ children, className, theme, accent }) => {
 	const [isSidebarOpen, setIsSideBarOpen] = useState(false);
@@ -10,7 +11,7 @@ const Layout = ({ children, className, theme, accent }) => {
 			"bg-white": theme === "light",
 		},
 		className,
-		"sm:py-20 overflow-x-hidden",
+		"sm:py-12 overflow-x-hidden",
 	);
 	return (
 		<div className='font-inter'>
@@ -27,6 +28,7 @@ const Layout = ({ children, className, theme, accent }) => {
 			>
 				<div className={MainClasses}>{children}</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

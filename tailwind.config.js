@@ -18,6 +18,7 @@ module.exports = {
 				"invested-card-p": "#717070",
 				"cta-card-image-bg": "hsla(0,0%,100%,.1)",
 				"cta-card-b": "rgba(30,71,255,.12)",
+				"footer-p": "#646464",
 			},
 			fontSize: {
 				"head-top": "18px",
