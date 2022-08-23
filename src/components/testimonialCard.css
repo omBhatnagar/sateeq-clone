@@ -1,0 +1,7 @@
+.topimage {
+    position: relative;
+    top: -50%;
+    transform: translate(0, -50%);
+    border: .3rem #3354d3 solid;
+    border-radius: 50%;
+  }

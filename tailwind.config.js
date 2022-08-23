@@ -16,6 +16,8 @@ module.exports = {
 				"media-grey": "#30323e",
 				"invested-p": "hsla(0,0%,100%,.6)",
 				"invested-card-p": "#717070",
+				"cta-card-image-bg": "hsla(0,0%,100%,.1)",
+				"cta-card-b": "rgba(30,71,255,.12)",
 			},
 			fontSize: {
 				"head-top": "18px",
@@ -29,6 +31,7 @@ module.exports = {
 					"0 2px 2px 0 rgba(0,0,0,.14)",
 					"0 1px 5px 0 rgba(0,0,0,.12)",
 				],
+				"cta-shadow": "0px 20px 40px rgb(0 0 0 / 10%) ",
 			},
 		},
 		fontFamily: {
