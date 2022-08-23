@@ -14,6 +14,8 @@ module.exports = {
 				funded: "rgba(7,169,23,.1)",
 				"funded-dark-green": "#07a917",
 				"media-grey": "#30323e",
+				"invested-p": "hsla(0,0%,100%,.6)",
+				"invested-card-p": "#717070",
 			},
 			fontSize: {
 				"head-top": "18px",
