@@ -84,7 +84,7 @@ const Deals = () => {
 	];
 
 	return (
-		<div className='mt-6'>
+		<div className='my-10'>
 			<div>
 				<h1 className='text-4xl text-center font-bold'>Latest Deals</h1>
 				<p className='text-center text-hero-p text-lg mt-2'>
@@ -93,7 +93,7 @@ const Deals = () => {
 					various sectors.{" "}
 				</p>
 			</div>
-			<div className='grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mt-12'>
+			<div className='grid gap-5 lg:gap-16 sm:grid-cols-2 lg:grid-cols-3 mt-12'>
 				{data?.map((item) => (
 					<DealsCard
 						img={item.img}
@@ -108,7 +108,7 @@ const Deals = () => {
 					/>
 				))}
 			</div>
-			<div className='mt-4 w-3/4 md:w-1/2 font-semibold text-lg mx-auto bg-nav-blue rounded-lg px-4 py-3 md:px-8 md:py-3 text-white text-center'>
+			<div className='mt-4 w-3/4 md:w-1/2 font-semibold text-lg mx-auto bg-nav-blue rounded-lg px-4 py-3 md:px-8 md:py-3 lg:w-1/3 xl:w-1/5 text-white text-center'>
 				View All
 			</div>
 		</div>

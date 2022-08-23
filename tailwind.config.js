@@ -13,6 +13,7 @@ module.exports = {
 				"testimonial-p": "#e2e2e2",
 				funded: "rgba(7,169,23,.1)",
 				"funded-dark-green": "#07a917",
+				"media-grey": "#30323e",
 			},
 			fontSize: {
 				"head-top": "18px",
