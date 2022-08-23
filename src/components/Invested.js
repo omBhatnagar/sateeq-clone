@@ -23,12 +23,12 @@ const Invested = () => {
 	];
 
 	return (
-		<div className='flex flex-col md:flex-row md:justify-around md:items-center md:rounded-3xl lg:rounded-[3rem] bg-gradient-to-r from-grad-b to-testimonial-lb w-full mx-auto px-4 md:w-[97%] mx-auto'>
+		<div className='flex flex-col md:flex-row md:justify-around md:items-center md:rounded-3xl lg:rounded-[3rem] bg-gradient-to-br from-grad-b to-testimonial-lb w-full mx-auto pt-32 px-4 md:w-[97%] mx-auto'>
 			<div className='md:w-1/3'>
 				<h1 className='text-center text-white text-xl md:text-left md:text-3xl font-bold mb-4'>
 					If you would have invested
 				</h1>
-				<p className='text-5xl text-white font-bold text-center md:text-left md:text-6xl mb-4'>
+				<p className='text-5xl text-white font-bold text-center md:text-left md:text-5xl mb-4'>
 					₹5000
 				</p>
 				<p className='text-center text-invested-p mb-4 text-base md:text-left md:text-md font-semibold'>

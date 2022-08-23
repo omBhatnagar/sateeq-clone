@@ -11,16 +11,14 @@ const Accordion = ({ heading, children }) => {
 				className='flex justify-between items-center px-3 cursor-pointer'
 				onClick={() => setActive(!active)}
 			>
-				<div className='text-xl md:text-2xl flex-1 font-semibold'>
-					{heading}
-				</div>
+				<div className='text-lg md:text-xl flex-1'>{heading}</div>
 				<i
 					className={cx(
 						{
 							"fa-solid fa-minus": active,
 							"fa-solid fa-plus": !active,
 						},
-						" mt-0.5 transform transition-transform duration-1000",
+						"text-grad-b mt-0.5 transform transition-transform duration-1000",
 					)}
 				/>
 			</div>
@@ -31,7 +29,7 @@ const Accordion = ({ heading, children }) => {
 						"max-h-96 duration-1000": active,
 						"max-h-0 duration-500": !active,
 					},
-					"text-gray-600 text-justify text-sm md:text-lg w-10/12 transform transition-all ease-in-out overflow-hidden px-3",
+					"text-hero-p mt-4 text-justify text-sm md:text-lg w-10/12 transform transition-all ease-in-out overflow-hidden px-3",
 				)}
 			>
 				{children}

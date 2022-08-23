@@ -12,7 +12,7 @@ const DealsCard = ({
 	finished,
 }) => {
 	return (
-		<div className='my-8 md:my-5 bg-white w-11/12 mx-auto shadow-deal-card rounded-lg'>
+		<div className='my-4 md:my-5 bg-white w-11/12 mx-auto shadow-deal-card rounded-lg'>
 			<div className=''>
 				<img src={img} alt='' className='rounded-t-lg' />
 			</div>
