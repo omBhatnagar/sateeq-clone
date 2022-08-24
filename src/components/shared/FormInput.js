@@ -96,7 +96,7 @@ const FormInput = ({
 							required={required}
 							onChange={(e) => setValue(e.target.value)}
 							size={size}
-							isInvalid={isInvalid ? !value : false}
+							// isInvalid={isInvalid ? !value : false}
 						/>
 					</InputGroup>
 				);

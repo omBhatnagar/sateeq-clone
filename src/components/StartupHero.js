@@ -1,6 +1,6 @@
 const StartupHero = () => {
 	return (
-		<div className='w-5/6 mx-auto lg:w-2/3 md:mt-20'>
+		<div className='w-5/6 mx-auto lg:w-7/12 md:mt-20'>
 			<h1 className='text-3xl leading-[48px] font-semibold mb-4'>
 				Raise with Incentiv
 			</h1>

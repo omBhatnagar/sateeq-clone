@@ -10,9 +10,12 @@ const DealsCard = ({
 	invest,
 	desc,
 	finished,
+	flex,
 }) => {
 	return (
-		<div className='my-4 md:my-5 bg-white w-11/12 mx-auto shadow-deal-card rounded-lg'>
+		<div
+			className={`my-4 md:my-5 bg-white w-11/12 sm:w-5/12 lg:w-1/3 xl:w-1/4 mx-auto shadow-deal-card rounded-lg `}
+		>
 			<div className=''>
 				<img src={img} alt='' className='rounded-t-lg' />
 			</div>
@@ -41,10 +44,10 @@ const DealsCard = ({
 					{finished ? (
 						<div className='flex justify-around items-center'>
 							<div className='flex flex-col bg-funded px-5 rounded-md'>
-								<p className='font-bold text-md text-funded-dark-green'>
+								<p className='font-bold text-sm text-funded-dark-green'>
 									{raised}
 								</p>
-								<p className='text-hero-p text-sm'>Raised</p>
+								<p className='text-hero-p text-xs'>Raised</p>
 							</div>
 							<div className='flex justify-around border py-3 px-6 rounded-md text-xs font-bold items-center border-funded-dark-green text-funded-dark-green'>
 								<img src={funded} alt='funded' />
@@ -55,15 +58,15 @@ const DealsCard = ({
 						<div className='flex justify-center'>
 							<div className='flex flex-col border-r border-slate-200 px-5'>
 								<p className='font-bold text-md'>{raised}</p>
-								<p className='text-hero-p text-sm'>Raised</p>
+								<p className='text-hero-p text-xs'>Raised</p>
 							</div>
 							<div className='flex flex-col border-r border-slate-200 px-5'>
 								<p className='font-bold text-md'>{close}</p>
-								<p className='text-hero-p font-sm'>Closes in</p>
+								<p className='text-hero-p font-xs'>Closes in</p>
 							</div>
 							<div className='flex flex-col px-5'>
 								<p className='font-bold text-md'>{invest}</p>
-								<p className='text-hero-p font-sm'>Min Invest</p>
+								<p className='text-hero-p font-xs'>Min Invest</p>
 							</div>
 						</div>
 					)}

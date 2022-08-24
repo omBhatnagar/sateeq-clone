@@ -2,20 +2,25 @@ import "./testimonialCard.css";
 
 const TestimonialCard = ({ img, profImg, name, des }) => {
 	return (
-		<section class='flex gap-4 bg-white p-1 pr-8 rounded-lg w-11/12 mt-7'>
-			<div className='w-11/12'>
-				<img src={profImg} alt='profile' />
+		<div className='flex gap-10'>
+			<div class='min-w-[400px] max-h-[150px] py-2 px-8 bg-white shadow-lg rounded-lg my-20'>
+				<div class='flex justify-center -mt-16'>
+					<div class='border-[4px] rounded-full border-indigo-700'>
+						<img
+							class='w-20 h-20 object-cover rounded-full border-[.3rem] '
+							src={img}
+						/>
+					</div>
+				</div>
+				<div className=' relative flex gap-6'>
+					<img className='relative w-20' src={profImg} alt='' />
+					<div className='mt-2'>
+						<div>{name}</div>
+						<div className='text-blue-600 font-bold'>{des}</div>
+					</div>
+				</div>
 			</div>
-			<article class='relative'>
-				<div class='flex justify-center w-full absolute w-1/2'>
-					<img class='topimage' src={img} alt='top' />
-				</div>
-				<div class='relative top-[40%]'>
-					<h3 class='font-bold text-xl'>{name}</h3>
-					<p class='text-blue-500 font-semibold text-lg'>{des}</p>
-				</div>
-			</article>
-		</section>
+		</div>
 	);
 };
 

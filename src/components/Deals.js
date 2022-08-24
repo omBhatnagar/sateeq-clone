@@ -16,6 +16,7 @@ import publicNext from "../images/publicNext.png";
 import publicNexts from "../images/publicNexts.jpg";
 
 import DealsCard from "./DealsCard";
+import { NavLink } from "react-router-dom";
 
 const Deals = ({ limited, isHeading }) => {
 	const data = [
@@ -95,6 +96,7 @@ const Deals = ({ limited, isHeading }) => {
 			close: "5 days",
 			invest: "₹10000",
 			finished: true,
+			flex: "flex-1",
 		},
 		{
 			img: publicNext,
@@ -106,11 +108,12 @@ const Deals = ({ limited, isHeading }) => {
 			close: "5 days",
 			invest: "₹10000",
 			finished: true,
+			flex: "flex-1",
 		},
 	];
 
 	return (
-		<div className='my-10 w-11/12 mx-auto'>
+		<div className='my-10 w-11/12 sm:w-5/6 mx-auto'>
 			{isHeading && (
 				<div>
 					<h1 className='text-4xl text-center font-bold'>Latest Deals</h1>
@@ -121,7 +124,7 @@ const Deals = ({ limited, isHeading }) => {
 					</p>
 				</div>
 			)}
-			<div className='grid gap-5 lg:gap-16 sm:grid-cols-2 lg:grid-cols-3 mt-12'>
+			<div className='flex flex-col gap-5 lg:gap-16 sm:flex-row flex-wrap mt-12'>
 				{data?.slice(0, limited).map((item) => (
 					<DealsCard
 						img={item.img}
@@ -133,12 +136,19 @@ const Deals = ({ limited, isHeading }) => {
 						invest={item.invest}
 						desc={item.desc}
 						finished={item.finished}
+						flex={item.flex}
 					/>
 				))}
 			</div>
-			<div className='mt-4 w-3/4 md:w-1/2 font-semibold text-lg mx-auto bg-nav-blue rounded-lg px-4 py-3 md:px-8 md:py-3 lg:w-1/3 xl:w-1/5 text-white text-center'>
-				View All
-			</div>
+			{limited === 6 ? (
+				<NavLink to='/invest'>
+					<div className='mt-4 w-3/4 md:w-1/2 font-semibold text-lg mx-auto bg-nav-blue rounded-lg px-4 py-3 md:px-8 md:py-3 lg:w-1/3 xl:w-1/5 text-white text-center'>
+						View All
+					</div>
+				</NavLink>
+			) : (
+				""
+			)}
 		</div>
 	);
 };

@@ -127,7 +127,7 @@ const StartupForm = () => {
 		},
 	];
 	return (
-		<div className='w-5/6 lg:w-2/3 mx-auto mb-8'>
+		<div className='w-5/6 lg:w-7/12 mx-auto mb-8'>
 			<form onSubmit={handleSubmit}>
 				<input
 					type='file'

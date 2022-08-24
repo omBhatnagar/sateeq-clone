@@ -29,7 +29,7 @@ const Cta = () => {
 					<CtaCard img={item.img} desc={item.desc} bgBlue={item.bgBlue} />
 				))}
 			</div>
-			<div className='mt-4 w-3/4 md:w-1/2 font-semibold text-lg mx-auto bg-nav-blue rounded-lg px-4 py-3 md:px-8 md:py-3 lg:w-1/3 xl:w-1/5 text-white text-center'>
+			<div className='mt-4 mb-10 w-3/4 md:w-1/2 font-semibold text-lg mx-auto bg-nav-blue rounded-lg px-4 py-3 md:px-8 md:py-3 lg:w-1/3 xl:w-1/5 text-white text-center'>
 				Sign Up
 			</div>
 		</>

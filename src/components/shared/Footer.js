@@ -26,7 +26,7 @@ const Footer = () => {
 					</div>
 					<div className=''>
 						<h2 className='text-media-grey text-lg font-semibold'>StartUp</h2>
-						<NavLink to='/login'>
+						<NavLink to='/startupsignup'>
 							<p className='text-footer-p text-sm leading-7 mt-4'>Login</p>
 						</NavLink>
 						<NavLink to='/raise'>

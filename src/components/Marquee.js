@@ -2,7 +2,7 @@ import TestimonialCard from "./TestimonialCard";
 
 const Marquee = ({ data }) => {
 	return (
-		<marquee class='py-16' loop='infinite'>
+		<marquee class='py-4' loop='infinite'>
 			<div class='flex gap-16'>
 				{data?.map((item, index) => (
 					<TestimonialCard
