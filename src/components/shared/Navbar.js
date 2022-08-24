@@ -3,16 +3,6 @@ import { NavLink } from "react-router-dom";
 import cx from "classnames";
 
 const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
-	const linkStyle = ({ isActive }) => ({
-		color: isActive
-			? accent
-				? accent
-				: "#C7C7C7"
-			: theme === "dark"
-			? "#8b8989"
-			: "#000",
-	});
-
 	const MenuClasses = cx({
 		"text-black": theme === "light",
 	});
@@ -76,14 +66,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 				)}
 			>
 				<div
-					className={cx(
-						"flex justify-between items-center w-full md:hidden",
-						// {
-						//   "border-bb-primary": accent === "text-bb-primary",
-						//   "border-ws-card-green": accent === "text-ws-card-green",
-						//   "border-yilp-primary": accent === "text-yilp-primary",
-						// }
-					)}
+					className={cx("flex justify-between items-center w-full md:hidden")}
 				>
 					{/* LOGO */}
 					<div className='flex item-center'>
@@ -122,16 +105,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 						<li className='flex justify-center md:order-1'>
 							<NavLink
 								to='/invest'
-								style={linkStyle}
-								className={({ isActive }) =>
-									cx(
-										{
-											"text-neutral-700 font-semibold":
-												isActive && theme === "dark",
-										},
-										"p-3 md:px-0 md:pr-2 text-lg md:text-head-top cursor-pointer font-semibold whitespace-nowrap",
-									)
-								}
+								className='p-3 md:px-0 md:pr-2 text-lg md:text-head-top cursor-pointer font-semibold whitespace-nowrap'
 							>
 								Invest
 							</NavLink>
@@ -139,16 +113,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 						<li className='flex justify-center md:order-1'>
 							<NavLink
 								to='/raise'
-								style={linkStyle}
-								className={({ isActive }) =>
-									cx(
-										{
-											"text-neutral-700 font-semibold":
-												isActive && theme === "dark",
-										},
-										"p-3 md:pl-3 md:pr-16 md:border-r border-slate-300 text-lg cursor-pointer font-semibold whitespace-nowrap",
-									)
-								}
+								className='p-3 md:pl-3 md:pr-16 md:border-r border-slate-300 text-lg cursor-pointer font-semibold whitespace-nowrap'
 							>
 								Raise
 							</NavLink>
@@ -156,7 +121,6 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 						<li className='mt-3 md:mt-0 md:order-3'>
 							<NavLink
 								to='/signup'
-								style={linkStyle}
 								className='text-lg md:text-base cursor-pointer font-semibold whitespace-nowrap'
 							>
 								<div className='w-full mx-auto bg-nav-blue rounded-lg px-4 py-4 md:px-8 md:py-3 text-white text-center'>
@@ -165,7 +129,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 							</NavLink>
 						</li>
 						<li className='mt-3 md:mt-0 md:order-2 md:pl-8'>
-							<NavLink to='/login' style={linkStyle}>
+							<NavLink to='/login'>
 								<div className='font-semibold text-lg md:text-base w-full mx-auto border border-nav-blue rounded-lg px-4 py-4 md:border-none text-nav-blue md:text-black text-center'>
 									Login
 								</div>
