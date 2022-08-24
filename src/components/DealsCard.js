@@ -32,7 +32,7 @@ const DealsCard = ({
 						</div>
 					</div>
 				</div>
-				<p className='text-center text-hero-p w-11/12 mx-auto text-sm leading-4'>
+				<p className='text-left text-hero-p w-11/12 mx-auto text-sm leading-4'>
 					{desc}
 				</p>
 				<div className='mb-4'>

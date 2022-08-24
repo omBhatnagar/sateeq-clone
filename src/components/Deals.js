@@ -10,10 +10,14 @@ import notwp from "../images/notwp.jpeg";
 import notwps from "../images/notwps.jpeg";
 import zapp from "../images/zapp.png";
 import zapps from "../images/zapps.png";
+import Group419 from "../images/Group419.png";
+import Group419s from "../images/Group419s.png";
+import publicNext from "../images/publicNext.png";
+import publicNexts from "../images/publicNexts.jpg";
 
 import DealsCard from "./DealsCard";
 
-const Deals = () => {
+const Deals = ({ limited, isHeading }) => {
 	const data = [
 		{
 			img: group432,
@@ -81,20 +85,44 @@ const Deals = () => {
 			invest: "₹10000",
 			finished: true,
 		},
+		{
+			img: Group419,
+			smallImg: Group419s,
+			heading: "Saarthi",
+			desc: " Saarthi.ai is a multilingual Contact Center AI company focused on Collections. It's the first of its kind collectio... ",
+			tags: ["Artificial"],
+			raised: "223.4%",
+			close: "5 days",
+			invest: "₹10000",
+			finished: true,
+		},
+		{
+			img: publicNext,
+			smallImg: publicNexts,
+			heading: "PublicNext",
+			desc: " PublicNext aims to connect 100 Cr Indians to their neighborhood via local language news, networking, and commerce ",
+			tags: ["Entertainment", "Others"],
+			raised: "168.5%",
+			close: "5 days",
+			invest: "₹10000",
+			finished: true,
+		},
 	];
 
 	return (
 		<div className='my-10 w-11/12 mx-auto'>
-			<div>
-				<h1 className='text-4xl text-center font-bold'>Latest Deals</h1>
-				<p className='text-center text-hero-p text-lg mt-2'>
-					{" "}
-					Access highly-vetted investment opportunities in startups across the
-					various sectors.{" "}
-				</p>
-			</div>
+			{isHeading && (
+				<div>
+					<h1 className='text-4xl text-center font-bold'>Latest Deals</h1>
+					<p className='text-center text-hero-p text-lg mt-2'>
+						{" "}
+						Access highly-vetted investment opportunities in startups across the
+						various sectors.{" "}
+					</p>
+				</div>
+			)}
 			<div className='grid gap-5 lg:gap-16 sm:grid-cols-2 lg:grid-cols-3 mt-12'>
-				{data?.map((item) => (
+				{data?.slice(0, limited).map((item) => (
 					<DealsCard
 						img={item.img}
 						smallImg={item.smallImg}

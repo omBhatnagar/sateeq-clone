@@ -23,7 +23,7 @@ const Invested = () => {
 	];
 
 	return (
-		<div className='flex flex-col md:flex-row md:justify-around md:items-center md:rounded-3xl lg:rounded-[3rem] bg-gradient-to-br from-grad-b to-testimonial-lb w-full mx-auto pt-32 px-4 md:w-[97%] mx-auto'>
+		<div className='flex flex-col md:flex-row md:justify-around md:items-center md:rounded-3xl lg:rounded-[3rem] bg-gradient-to-br from-grad-b to-testimonial-lb w-full mx-auto pt-10 px-4 md:w-[97%] mx-auto'>
 			<div className='md:w-1/3'>
 				<h1 className='text-center text-white text-xl md:text-left md:text-3xl font-bold mb-4'>
 					If you would have invested

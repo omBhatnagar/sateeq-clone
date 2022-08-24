@@ -15,7 +15,7 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className='grid grid-cols-2 md:grid-cols-4 mt-6 w-5/6 mx-auto gap-5'>
-					<div className='w-1/3'>
+					<div className='md:w-1/3'>
 						<h2 className='text-media-grey text-lg font-semibold'>Investors</h2>
 						<NavLink to='/login'>
 							<p className='text-footer-p text-sm leading-7 mt-4'>Login</p>
@@ -24,7 +24,7 @@ const Footer = () => {
 							<p className='text-footer-p text-sm leading-7 mt-4'>Invest</p>
 						</NavLink>
 					</div>
-					<div className='w-1/3'>
+					<div className='md:w-1/3'>
 						<h2 className='text-media-grey text-lg font-semibold'>StartUp</h2>
 						<NavLink to='/login'>
 							<p className='text-footer-p text-sm leading-7 mt-4'>Login</p>

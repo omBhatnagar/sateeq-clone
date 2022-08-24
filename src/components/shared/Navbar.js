@@ -1,4 +1,4 @@
-import companyLogo from "../../images/incentiv.jpeg";
+import companyLogo from "../../images/logo-dark.svg";
 import { NavLink } from "react-router-dom";
 import cx from "classnames";
 
@@ -22,7 +22,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 		<div>
 			<div
 				className={cx(
-					"py-4 transform transition-transform duration-500 ease-in-out md:hidden bg-white",
+					"pb-4 transform transition-transform duration-500 ease-in-out md:hidden bg-white",
 				)}
 			>
 				{/* MOBILE VIEW */}
@@ -37,10 +37,10 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 					)}
 				>
 					{/* LOGO */}
-					<div className='h-1/2 flex item-center'>
+					<div className='flex item-center'>
 						<img
 							src={Logo}
-							style={{ height: "4rem" }}
+							style={{ width: "6rem" }}
 							className='py-2'
 							alt='Incentiv'
 						/>
@@ -68,7 +68,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 
 			<div
 				className={cx(
-					"fixed md:absolute top-0 right-0 w-full sm:w-3/5 md:w-screen px-12 transform transition-transform duration-500 ease-in-out z-40 bg-white",
+					"fixed md:absolute top-0 right-0 w-full sm:w-3/5 md:w-screen px-24 transform transition-transform duration-500 ease-in-out z-40 bg-white",
 					{
 						"translate-x-0": open,
 						"-translate-x-full md:translate-x-0": !open,
@@ -77,7 +77,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 			>
 				<div
 					className={cx(
-						"flex justify-between items-center w-full pt-4 md:hidden",
+						"flex justify-between items-center w-full md:hidden",
 						// {
 						//   "border-bb-primary": accent === "text-bb-primary",
 						//   "border-ws-card-green": accent === "text-ws-card-green",
@@ -86,10 +86,10 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 					)}
 				>
 					{/* LOGO */}
-					<div className='h-1/2 flex item-center'>
+					<div className='flex item-center'>
 						<img
 							src={Logo}
-							style={{ height: "4rem" }}
+							style={{ width: "6rem" }}
 							className='py-2'
 							alt='Incentiv'
 						/>
@@ -112,7 +112,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 					<div className='flex md:gap-8 items-center'>
 						<img
 							src={Logo}
-							style={{ height: "4.5rem" }}
+							style={{ height: "7rem" }}
 							className='py-2 hidden md:block'
 							alt='Incentiv'
 						/>
@@ -126,7 +126,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 								className={({ isActive }) =>
 									cx(
 										{
-											"text-neutral-700 font-bold":
+											"text-neutral-700 font-semibold":
 												isActive && theme === "dark",
 										},
 										"p-3 md:px-0 md:pr-2 text-lg md:text-head-top cursor-pointer font-semibold whitespace-nowrap",
@@ -143,10 +143,10 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 								className={({ isActive }) =>
 									cx(
 										{
-											"text-neutral-700 font-bold":
+											"text-neutral-700 font-semibold":
 												isActive && theme === "dark",
 										},
-										"p-3 md:pl-3 md:pr-8 md:border-r border-slate-300 text-lg lg:text-xl cursor-pointer font-semibold whitespace-nowrap",
+										"p-3 md:pl-3 md:pr-16 md:border-r border-slate-300 text-lg cursor-pointer font-semibold whitespace-nowrap",
 									)
 								}
 							>
@@ -164,7 +164,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 								</div>
 							</NavLink>
 						</li>
-						<li className='mt-3 md:mt-0 md:order-2'>
+						<li className='mt-3 md:mt-0 md:order-2 md:pl-8'>
 							<NavLink to='/login' style={linkStyle}>
 								<div className='font-semibold text-lg md:text-base w-full mx-auto border border-nav-blue rounded-lg px-4 py-4 md:border-none text-nav-blue md:text-black text-center'>
 									Login

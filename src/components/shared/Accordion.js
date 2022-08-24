@@ -5,7 +5,7 @@ const Accordion = ({ heading, children }) => {
 	const [active, setActive] = useState(false);
 
 	return (
-		<div className=''>
+		<div className='w-11/12 mx-auto'>
 			{/* HEADING */}
 			<div
 				className='flex justify-between items-center px-3 cursor-pointer'
