@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import FormInput from "./shared/FormInput";
+import Dropzone from "./Dropzone";
 
 const StartupForm = () => {
 	const [file, setFile] = useState();
@@ -11,12 +12,27 @@ const StartupForm = () => {
 	const [amount, setAmount] = useState();
 	const [isRaised, setIsRaised] = useState();
 	const [companyInfo, setCompanyInfo] = useState();
+	const [errors, setErrors] = useState(false);
 
 	const inputRef = useRef(null);
-	const pitchRef = useRef(null);
+
+	useEffect(() => {
+		if (
+			!companyName ||
+			!email ||
+			!contact ||
+			!city ||
+			!amount ||
+			!isRaised ||
+			!companyInfo
+		) {
+			setErrors(true);
+		} else {
+			setErrors(false);
+		}
+	}, [companyName, email, contact, city, amount, isRaised, companyInfo]);
 
 	const handleClick = () => inputRef.current.click();
-	const pitchHandler = () => pitchRef.current.click();
 	const fileHandler = (e) => {
 		setFile(e.target.files[0]);
 	};
@@ -130,28 +146,33 @@ const StartupForm = () => {
 						required={item.required}
 					/>
 				))}
-				<input
+				{/* <input
 					type='file'
 					name='logo'
 					className='hidden'
 					onChange={(e) => setPitch(e.target.files[0])}
 					ref={pitchRef}
-				/>
+				/> */}
 				<div className='my-4'>
 					<h1 className='text-xl text-black font-semibold leading-8'>
 						Pitch Deck
 					</h1>
-					<div className='border-4 border-[#78aff5] border-dashed rounded-xl bg-[#f0f8ff] flex justify-center items-center px-6 py-10 w-11/12 mx-auto'>
-						Drag and drop or click to browse
-					</div>
+					{/* <div
+						className='border-4 border-[#78aff5] border-dashed rounded-xl bg-[#f0f8ff] flex justify-center items-center px-6 py-10 w-11/12 mx-auto'
+						onClick={pitchHandler}
+					>
+						Click to browse
+					</div> */}
+					<Dropzone setPitch={setPitch} />
 				</div>
-				<div className='w-11/12 mx-auto mt-8'>
-					<div
-						onClick={handleSubmit}
-						className="className='mt-4 w-11/12 font-semibold text-lg mx-auto bg-nav-blue rounded-lg px-4 py-3 md:px-8 md:py-3 text-white text-center"
+				<div className='w-5/6 mx-auto mt-8'>
+					<button
+						type='submit'
+						disabled={errors}
+						className="className='mt-4 w-full font-semibold text-lg mx-auto bg-nav-blue rounded-lg px-4 py-3 md:px-8 md:py-3 text-white text-center disabled:bg-slate-200 disabled:text-slate-400"
 					>
 						Submit
-					</div>
+					</button>
 				</div>
 			</form>
 		</div>

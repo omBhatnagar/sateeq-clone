@@ -16,13 +16,15 @@ const SignupForm = () => {
 					Please provide us with your name and email
 				</p>
 			</div>
-			<div className='flex justify-between items-center'>
+			<div className='flex justify-between items-center flex-wrap'>
 				<FormInput
 					value={fname}
 					setValue={setFname}
 					required={true}
 					placeholder={"First Name"}
 					type={"text"}
+					grouped={true}
+					size={"lg"}
 				/>
 				<FormInput
 					value={lname}
@@ -30,15 +32,24 @@ const SignupForm = () => {
 					required={true}
 					placeholder={"Last Name"}
 					type={"text"}
+					grouped={true}
+					size={"lg"}
+				/>
+				<FormInput
+					value={email}
+					setValue={setEmail}
+					required={true}
+					placeholder={"Email"}
+					type={"email"}
+					grouped={false}
+					size={"lg"}
 				/>
 			</div>
-			<FormInput
-				value={email}
-				setValue={setEmail}
-				required={true}
-				placeholder={"Email"}
-				type={"email"}
-			/>
+			<div
+				className={`mt-4 w-full font-semibold text-lg mx-auto md:mx-0 bg-grad-b rounded-xl p-4 md:px-8 md:py-3 text-white text-center mb-4`}
+			>
+				Next
+			</div>
 		</div>
 	);
 };
