@@ -12,7 +12,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 		<div>
 			<div
 				className={cx(
-					"pb-4 transform transition-transform duration-500 ease-in-out md:hidden bg-white",
+					"transform transition-transform duration-500 ease-in-out md:hidden bg-white",
 				)}
 			>
 				{/* MOBILE VIEW */}
@@ -58,7 +58,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 
 			<div
 				className={cx(
-					"fixed md:absolute top-0 right-0 w-full sm:w-3/5 md:w-screen px-24 transform transition-transform duration-500 ease-in-out z-40 bg-white",
+					"fixed md:absolute top-0 right-0 w-full sm:w-3/5 md:w-screen px-6 md:px-24 transform transition-transform duration-500 ease-in-out z-40 bg-white",
 					{
 						"translate-x-0": open,
 						"-translate-x-full md:translate-x-0": !open,

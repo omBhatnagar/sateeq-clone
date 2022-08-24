@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import Invest from "./pages/Invest";
 import { ChakraProvider } from "@chakra-ui/react";
 import Raise from "./pages/Raise";
+import StartupSignup from "./pages/StartupSignup";
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 					<Route path='/' element={<HomePage />}></Route>
 					<Route path='/invest' element={<Invest />}></Route>
 					<Route path='/raise' element={<Raise />}></Route>
+					<Route path='/startupsignup' element={<StartupSignup />}></Route>
 				</Routes>
 			</Router>
 		</ChakraProvider>

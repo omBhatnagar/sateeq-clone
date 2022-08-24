@@ -1,6 +1,8 @@
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { useState } from "react";
 
 const InvestHero = () => {
+	const [value, setValue] = useState("");
 	return (
 		<div className='w-11/12 mx-auto'>
 			<div className='text-left font-extrabold text-4xl mb-4 md:text-left lg:mt-12 xl:mt-24'>
@@ -16,7 +18,15 @@ const InvestHero = () => {
 					size='lg'
 					children={<i class='fa-solid fa-magnifying-glass' />}
 				/>
-				<Input placeholder='Search Startups Campaign' size='lg' />
+				<Input
+					placeholder='Search Startups Campaign'
+					size='lg'
+					value={value}
+					onChange={(e) => {
+						setValue(e.target.value);
+						console.log("Search Bar State: ", e.target.value);
+					}}
+				/>
 			</InputGroup>
 		</div>
 	);
