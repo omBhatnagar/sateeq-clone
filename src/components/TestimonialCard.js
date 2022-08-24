@@ -2,8 +2,8 @@ import "./testimonialCard.css";
 
 const TestimonialCard = ({ img, profImg, name, des }) => {
 	return (
-		<section class='flex gap-4 bg-white p-1 pr-8 rounded-lg w-1/3 mt-7'>
-			<div className='w-1/4'>
+		<section class='flex gap-4 bg-white p-1 pr-8 rounded-lg w-11/12 mt-7'>
+			<div className='w-11/12'>
 				<img src={profImg} alt='profile' />
 			</div>
 			<article class='relative'>

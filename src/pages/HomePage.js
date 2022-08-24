@@ -10,7 +10,7 @@ import home2 from "../images/home2.svg";
 
 const HomePage = () => {
 	return (
-		<Layout>
+		<Layout isHome={true}>
 			<HomeHero
 				line1='Invest in'
 				line2='Highly-Vetted'

@@ -12,16 +12,16 @@ const HomeHero = ({
 	url,
 }) => {
 	return (
-		<div className='mt-6 md:mt-10 flex flex-col items-center md:flex-row md:px-10 w-11/12 mx-auto'>
-			<div className='xl:w-5/12 pt-5 lg:pb-20'>
-				<div className='text-center text-4xl md:text-5xl md:text-left lg:mt-12 xl:mt-24'>
-					<span className='block font-extrabold leading-hero lg:leading-[64px]'>
+		<div className=' md:mt-10 flex flex-col items-center md:flex-row md:px-10 w-11/12 mx-auto'>
+			<div className='xl:w-5/12 md:pt-5 lg:pb-20'>
+				<div className='text-center text-4xl md:text-5xl md:text-left lg:mt-4 xl:mt-6'>
+					<span className='block font-extrabold leading-hero md:leading-[64px]'>
 						{line1}
 					</span>
-					<span className='block font-extrabold leading-hero whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-grad-lb via-grad-b to-grad-db lg:leading-[64px]'>
+					<span className='block font-extrabold leading-hero whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-grad-lb via-grad-b to-grad-db md:leading-[64px]'>
 						{line2}
 					</span>
-					<span className='block font-extrabold mb-4 leading-hero lg:leading-[64px]'>
+					<span className='block font-extrabold mb-4 leading-hero md:leading-[64px]'>
 						{line3}
 					</span>
 				</div>

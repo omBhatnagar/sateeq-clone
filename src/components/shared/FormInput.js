@@ -14,7 +14,7 @@ const FormInput = ({
 	placeholder,
 	type,
 	required,
-	radioData,
+	isInvalid,
 	placeholderStyle,
 	grouped,
 	size,
@@ -30,7 +30,7 @@ const FormInput = ({
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
 						size={size}
-						isInvalid={!value}
+						isInvalid={isInvalid ? !value : false}
 					/>
 				);
 			case "number":
@@ -45,7 +45,7 @@ const FormInput = ({
 						}
 						required={required}
 						size={size}
-						isInvalid={!value}
+						isInvalid={isInvalid ? !value : false}
 					/>
 				);
 			case "email":
@@ -58,7 +58,7 @@ const FormInput = ({
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
 						size={size}
-						isInvalid={!value}
+						isInvalid={isInvalid ? !value : false}
 					/>
 				);
 			case "radio":
@@ -81,7 +81,7 @@ const FormInput = ({
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
 						size={size}
-						isInvalid={!value}
+						isInvalid={isInvalid ? !value : false}
 					/>
 				);
 			case "phone":
@@ -96,7 +96,7 @@ const FormInput = ({
 							required={required}
 							onChange={(e) => setValue(e.target.value)}
 							size={size}
-							isInvalid={!value}
+							isInvalid={isInvalid ? !value : false}
 						/>
 					</InputGroup>
 				);

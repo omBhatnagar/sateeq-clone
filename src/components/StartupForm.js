@@ -60,6 +60,7 @@ const StartupForm = () => {
 			placeholder: "Compnay Name",
 			type: "text",
 			required: true,
+			isInvalid: true,
 		},
 		{
 			value: email,
@@ -68,6 +69,7 @@ const StartupForm = () => {
 			placeholder: "Email",
 			type: "email",
 			required: true,
+			isInvalid: true,
 		},
 		{
 			value: contact,
@@ -76,6 +78,7 @@ const StartupForm = () => {
 			placeholder: "Contact No.",
 			type: "phone",
 			required: true,
+			isInvalid: true,
 		},
 		{
 			value: city,
@@ -84,6 +87,7 @@ const StartupForm = () => {
 			placeholder: "City",
 			type: "text",
 			required: true,
+			isInvalid: true,
 		},
 		{
 			value: amount,
@@ -92,6 +96,7 @@ const StartupForm = () => {
 			placeholder: "Amount",
 			type: "number",
 			required: true,
+			isInvalid: true,
 		},
 		{
 			value: isRaised,
@@ -118,6 +123,7 @@ const StartupForm = () => {
 			placeholder: "Tell us about your revenue, growth, users, etc.",
 			type: "textarea",
 			required: true,
+			isInvalid: true,
 		},
 	];
 	return (
@@ -144,6 +150,7 @@ const StartupForm = () => {
 						placeholder={item.placeholder}
 						type={item.type}
 						required={item.required}
+						isInvalid={item.isInvalid}
 					/>
 				))}
 				{/* <input

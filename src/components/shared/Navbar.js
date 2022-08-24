@@ -28,12 +28,14 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 				>
 					{/* LOGO */}
 					<div className='flex item-center'>
-						<img
-							src={Logo}
-							style={{ width: "6rem" }}
-							className='py-2'
-							alt='Incentiv'
-						/>
+						<NavLink to='/'>
+							<img
+								src={Logo}
+								style={{ width: "6rem" }}
+								className=''
+								alt='Incentiv'
+							/>
+						</NavLink>
 						{/* LOGO 2*/}
 						{/* {logo2 && (
               <img
@@ -51,7 +53,7 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 							isOpen(!open);
 						}}
 					>
-						<i className={`fa fa-bars ${MenuClasses}`} />
+						<i className={`fa fa-bars text-grad-b ${MenuClasses}`} />
 					</button>
 				</div>
 			</div>
@@ -70,12 +72,14 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 				>
 					{/* LOGO */}
 					<div className='flex item-center'>
-						<img
-							src={Logo}
-							style={{ width: "6rem" }}
-							className='py-2'
-							alt='Incentiv'
-						/>
+						<NavLink to='/'>
+							<img
+								src={Logo}
+								style={{ width: "6rem" }}
+								className=''
+								alt='Incentiv'
+							/>
+						</NavLink>
 					</div>
 					{/* MENU */}
 					<button
@@ -84,21 +88,25 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 							isOpen(!open);
 						}}
 					>
-						<i className={`fa-solid fa-xmark z-44 fa-lg ${MenuClasses}`} />
+						<i
+							className={`fa-solid fa-xmark text-grad-b z-44 fa-lg ${MenuClasses}`}
+						/>
 					</button>
 				</div>
 				<div
 					className={
-						"flex flex-col h-screen py-28 tracking-wider md:flex-row md:items-center justify-start md:justify-between md:h-auto md:w-full md:py-0 md:mx-auto"
+						"flex flex-col h-screen py-24 tracking-wider md:flex-row md:items-center justify-start md:justify-between md:h-auto md:w-full md:py-0 md:mx-auto"
 					}
 				>
 					<div className='flex md:gap-8 items-center'>
-						<img
-							src={Logo}
-							style={{ height: "7rem" }}
-							className='py-2 hidden md:block'
-							alt='Incentiv'
-						/>
+						<NavLink to='/'>
+							<img
+								src={Logo}
+								style={{ height: "7rem" }}
+								className='hidden md:block'
+								alt='Incentiv'
+							/>
+						</NavLink>
 					</div>
 					{/* NAVLIST */}
 					<ul className='flex flex-col justify-between md:flex-row md:items-center list-none gap-1 md:gap-3ß'>

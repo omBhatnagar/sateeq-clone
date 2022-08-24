@@ -3,7 +3,7 @@ import logo from "../../images/logo-dark.png";
 
 const Footer = () => {
 	return (
-		<div className='bg-[rgba(200,210,255,.15)] px-10 py-6'>
+		<div className='bg-[rgba(200,210,255,.15)] px-10 py-6 pb-20'>
 			<div className='flex flex-col md:flex-row'>
 				<div className='w-5/6 md:w-1/3 lg:w-1/2 mx-auto'>
 					<div className='w-5/12 lg:w-1/3'>

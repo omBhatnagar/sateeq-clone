@@ -34,6 +34,7 @@ module.exports = {
 					"0 1px 5px 0 rgba(0,0,0,.12)",
 				],
 				"cta-shadow": "0px 20px 40px rgb(0 0 0 / 10%) ",
+				"whatsapp-shadow": "-4px 6px 21px -8px #949494",
 			},
 		},
 		fontFamily: {

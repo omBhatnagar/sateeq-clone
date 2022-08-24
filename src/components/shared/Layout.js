@@ -2,8 +2,9 @@ import Navbar from "./Navbar";
 import cx from "classnames";
 import { useState } from "react";
 import Footer from "./Footer";
+import Sticky from "./Sticky";
 
-const Layout = ({ children, className, theme, accent }) => {
+const Layout = ({ children, className, theme, accent, isHome }) => {
 	const [isSidebarOpen, setIsSideBarOpen] = useState(false);
 	const MainClasses = cx(
 		{
@@ -29,8 +30,12 @@ const Layout = ({ children, className, theme, accent }) => {
 				<div className={MainClasses}>{children}</div>
 			</div>
 			<Footer />
+			<Sticky isHome={isHome} />
 		</div>
 	);
 };
 
+Layout.defaultProps = {
+	isHome: false,
+};
 export default Layout;
