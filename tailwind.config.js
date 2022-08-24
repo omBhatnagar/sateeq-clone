@@ -19,6 +19,7 @@ module.exports = {
 				"cta-card-image-bg": "hsla(0,0%,100%,.1)",
 				"cta-card-b": "rgba(30,71,255,.12)",
 				"footer-p": "#646464",
+				"signup-blue-p": "#2c3e50",
 			},
 			fontSize: {
 				"head-top": "18px",

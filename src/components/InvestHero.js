@@ -4,7 +4,7 @@ import { useState } from "react";
 const InvestHero = () => {
 	const [value, setValue] = useState("");
 	return (
-		<div className='w-11/12 mx-auto'>
+		<div className='w-11/12 mx-auto md:mt-20'>
 			<div className='text-left font-extrabold text-4xl mb-4 md:text-left lg:mt-12 xl:mt-24'>
 				<h1>Invest Now</h1>
 			</div>

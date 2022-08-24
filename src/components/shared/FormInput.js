@@ -10,7 +10,6 @@ import {
 	NumberDecrementStepper,
 	Radio,
 	RadioGroup,
-	Stack,
 } from "@chakra-ui/react";
 
 const FormInput = ({
@@ -21,6 +20,7 @@ const FormInput = ({
 	type,
 	required,
 	radioData,
+	placeholderStyle,
 }) => {
 	const returnInput = (type) => {
 		switch (type) {
@@ -28,6 +28,7 @@ const FormInput = ({
 				return (
 					<Input
 						placeholder={placeholder}
+						_placeholder={placeholderStyle}
 						value={value}
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
@@ -48,6 +49,7 @@ const FormInput = ({
 					<Input
 						type='email'
 						placeholder={placeholder}
+						_placeholder={placeholderStyle}
 						value={value}
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
@@ -65,6 +67,7 @@ const FormInput = ({
 				return (
 					<Textarea
 						placeholder={placeholder}
+						_placeholder={placeholderStyle}
 						value={value}
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
@@ -77,6 +80,8 @@ const FormInput = ({
 						<Input
 							type='tel'
 							value={value}
+							placeholder={placeholder}
+							_placeholder={placeholderStyle}
 							required={required}
 							onChange={(e) => setValue(e.target.value)}
 						/>

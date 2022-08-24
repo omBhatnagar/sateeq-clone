@@ -6,7 +6,7 @@ const Footer = () => {
 		<div className='bg-[rgba(200,210,255,.15)] px-10 py-6'>
 			<div className='flex flex-col md:flex-row'>
 				<div className='w-5/6 md:w-1/3 lg:w-1/2 mx-auto'>
-					<div className='w-5/12'>
+					<div className='w-5/12 lg:w-1/3'>
 						<img src={logo} alt='logo' className=' -ml-3' />
 					</div>
 					<div className='text-footer-p text-sm leading-7'>
@@ -15,7 +15,7 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className='grid grid-cols-2 md:grid-cols-4 mt-6 w-5/6 mx-auto gap-5'>
-					<div className='md:w-1/3'>
+					<div className=''>
 						<h2 className='text-media-grey text-lg font-semibold'>Investors</h2>
 						<NavLink to='/login'>
 							<p className='text-footer-p text-sm leading-7 mt-4'>Login</p>
@@ -24,7 +24,7 @@ const Footer = () => {
 							<p className='text-footer-p text-sm leading-7 mt-4'>Invest</p>
 						</NavLink>
 					</div>
-					<div className='md:w-1/3'>
+					<div className=''>
 						<h2 className='text-media-grey text-lg font-semibold'>StartUp</h2>
 						<NavLink to='/login'>
 							<p className='text-footer-p text-sm leading-7 mt-4'>Login</p>
