@@ -1,4 +1,4 @@
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { Input } from "@mantine/core";
 import { useState } from "react";
 
 const InvestHero = () => {
@@ -13,12 +13,9 @@ const InvestHero = () => {
 				Browse latest investment opportunities on Sateeq. All companies are{" "}
 				<span className='font-semibold'> vetted & pass due diligence. </span>
 			</p>
-			<InputGroup className='my-4'>
-				<InputLeftElement
-					size='lg'
-					children={<i class='fa-solid fa-magnifying-glass' />}
-				/>
+			<div className='my-4'>
 				<Input
+					icon={<i class='fa-solid fa-magnifying-glass' />}
 					placeholder='Search Startups Campaign'
 					size='lg'
 					value={value}
@@ -27,7 +24,7 @@ const InvestHero = () => {
 						console.log("Search Bar State: ", e.target.value);
 					}}
 				/>
-			</InputGroup>
+			</div>
 		</div>
 	);
 };
