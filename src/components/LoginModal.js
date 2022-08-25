@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import googleLogo from "../images/googleLogo.svg";
 import FormInput from "./shared/FormInput";
 
-const LoginModal = ({ isOpen, setIsOpen }) => {
+const LoginModal = ({ isOpen, setIsOpen, withCloseButton }) => {
 	const [isLogin, setIsLogin] = useState(false);
 
 	const handleClose = () => setIsOpen(false);
@@ -16,7 +16,7 @@ const LoginModal = ({ isOpen, setIsOpen }) => {
 				size='sm'
 				opened={isOpen}
 				onClose={handleClose}
-				withCloseButton={false}
+				withCloseButton={withCloseButton}
 				className='rounded-2xl'
 			>
 				{isLogin ? (
@@ -27,6 +27,10 @@ const LoginModal = ({ isOpen, setIsOpen }) => {
 			</Modal>
 		</>
 	);
+};
+
+LoginModal.defaultProps = {
+	withCloseButton: false,
 };
 
 const LoginForm = () => {
