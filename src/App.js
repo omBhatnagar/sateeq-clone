@@ -6,6 +6,7 @@ import Raise from "./pages/Raise";
 import { MantineProvider } from "@mantine/core";
 import StartupSignup from "./pages/StartupSignup";
 import Signup from "./pages/Signup";
+import NotFound from "./pages/NotFound";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 					<Route path='/raise' element={<Raise />}></Route>
 					<Route path='/signup' element={<Signup />}></Route>
 					<Route path='/startupsignup' element={<StartupSignup />}></Route>
+					<Route path='/*' element={<NotFound />}></Route>
 				</Routes>
 			</Router>
 		</MantineProvider>
