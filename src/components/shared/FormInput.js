@@ -31,7 +31,7 @@ const FormInput = ({
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
 						size={size}
-						invalid={isInvalid ? !value : false}
+						// invalid={isInvalid ? !value : false}
 					/>
 				);
 			case "number":
@@ -46,7 +46,7 @@ const FormInput = ({
 						}
 						required={required}
 						size={size}
-						invalid={isInvalid ? !value : false}
+						// invalid={isInvalid ? !value : false}
 					/>
 				);
 			case "email":
@@ -59,7 +59,7 @@ const FormInput = ({
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
 						size={size}
-						invalid={isInvalid ? !value : false}
+						// invalid={isInvalid ? !value : false}
 					/>
 				);
 			case "radio":
@@ -82,12 +82,12 @@ const FormInput = ({
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
 						size={size}
-						invalid={isInvalid ? !value : false}
+						// invalid={isInvalid ? !value : false}
 					/>
 				);
 			case "phone":
 				return (
-					<div className='flex justify-between items-center w-full border border-slate-200 pl-1 pr-4 py-2 rounded-md'>
+					<div className='flex justify-between cursor-text items-center w-full border border-slate-200 pl-1 pr-4 py-2 rounded-md'>
 						<span className='pr-1'>+91 </span>
 						<div className='flex-1'>
 							<input
@@ -110,7 +110,14 @@ const FormInput = ({
 	};
 	return (
 		<div className={`my-4 ${grouped ? "w-[45%]" : "w-full"}`}>
-			<h1 className='text-xl text-black font-semibold leading-8'>{heading}</h1>
+			<h1 className='text-xl text-black font-semibold leading-8'>
+				{heading}
+				{isInvalid && (
+					<sup>
+						<i class='fa-solid fa-asterisk text-red-600 fa-xs'></i>
+					</sup>
+				)}
+			</h1>
 			{returnInput(type)}
 		</div>
 	);
