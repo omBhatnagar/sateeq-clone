@@ -28,7 +28,10 @@ const DealsCard = ({
 						<h2 className='text-2xl font-bold'>{heading}</h2>
 						<div className='flex justify-about gap-1'>
 							{tags?.map((tag, index) => (
-								<button className='rounded-lg text-xs font-bold text-white text-center px-3 py-2 mt-2 bg-grad-b'>
+								<button
+									key={index}
+									className='rounded-lg text-xs font-bold text-white text-center px-3 py-2 mt-2 bg-grad-b'
+								>
 									{tag}
 								</button>
 							))}

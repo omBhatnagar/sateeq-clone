@@ -39,8 +39,12 @@ const Faqs = () => {
 				</div>
 			</div>
 			<div className='w-11/12 mx-auto md:w-7/12'>
-				{data?.map((item) => (
-					<Accordion heading={item.heading} children={item.content} />
+				{data?.map((item, index) => (
+					<Accordion
+						key={index}
+						heading={item.heading}
+						children={item.content}
+					/>
 				))}
 			</div>
 		</div>

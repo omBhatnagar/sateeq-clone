@@ -15,8 +15,8 @@ const Media = () => {
 				</p>
 			</div>
 			<div className='flex flex-col md:flex-row justify-between items-center lg:w-5/6 lg:mx-auto'>
-				{[cnbc, business, yourStory, et].map((item) => (
-					<div className='w-1/2 md:w-1/6 my-6'>
+				{[cnbc, business, yourStory, et].map((item, index) => (
+					<div key={index} className='w-1/2 md:w-1/6 my-6'>
 						<img src={item} alt='media' className='w-full' />
 					</div>
 				))}

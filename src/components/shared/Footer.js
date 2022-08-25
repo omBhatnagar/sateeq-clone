@@ -47,29 +47,29 @@ const Footer = () => {
 							Privacy Policy
 						</p>
 
-						<p className='text-footer-p text-sm leading-7 mt-4'>
+						<div className='text-footer-p text-sm leading-7 mt-4'>
 							<p>Terms & </p>
 							<p>Conditions</p>
-						</p>
+						</div>
 					</div>
 					<div>
 						<h2 className='text-media-grey text-lg font-semibold'>
 							Get In Touch
 						</h2>
-						<p className='text-footer-p text-sm leading-7 mt-4'>
+						<div className='text-footer-p text-sm leading-7 mt-4'>
 							<p>Questions or</p>
 							<p>Feedback</p>
-						</p>
+						</div>
 
-						<p className='text-footer-p text-sm leading-7 mt-4'>
+						<div className='text-footer-p text-sm leading-7 mt-4'>
 							<p>We'd love to hear</p>
 							<p>from you</p>
-						</p>
+						</div>
 						<div className='flex justify-around items-center mt-3'>
-							<i class='fa-brands fa-linkedin'></i>
-							<i class='fa-brands fa-facebook'></i>
-							<i class='fa-brands fa-instagram'></i>
-							<i class='fa-solid fa-envelope'></i>
+							<i className='fa-brands fa-linkedin'></i>
+							<i className='fa-brands fa-facebook'></i>
+							<i className='fa-brands fa-instagram'></i>
+							<i className='fa-solid fa-envelope'></i>
 						</div>
 					</div>
 				</div>

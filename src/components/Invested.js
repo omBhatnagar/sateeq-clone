@@ -41,8 +41,9 @@ const Invested = () => {
 				</div>
 			</div>
 			<div className='flex flex-col md:flex-row md:flex-wrap justify-center md:justify-between items-center gap-5 md:w-1/2 lg:w-5/12 py-16'>
-				{data?.map((item) => (
+				{data?.map((item, index) => (
 					<InvestedCards
+						key={index}
 						img={item.img}
 						earned={item.earned}
 						isFlexCol={item.isFlexCol}

@@ -125,8 +125,9 @@ const Deals = ({ limited, isHeading }) => {
 				</div>
 			)}
 			<div className='flex flex-col gap-5 lg:gap-16 sm:flex-row flex-wrap mt-12'>
-				{data?.slice(0, limited).map((item) => (
+				{data?.slice(0, limited).map((item, index) => (
 					<DealsCard
+						key={index}
 						img={item.img}
 						smallImg={item.smallImg}
 						heading={item.heading}
