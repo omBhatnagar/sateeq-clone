@@ -65,7 +65,7 @@ const NavbarAlt = ({ theme, open, isOpen }) => {
 
 			<div
 				className={cx(
-					"fixed sm:absolute top-0 right-0 w-full sm:w-3/5 sm:w-screen px-6 sm:px-24 transform transition-transform duration-500 ease-in-out z-40 bg-white",
+					"fixed sm:fixed top-0 right-0 w-full sm:w-3/5 sm:w-screen px-6 sm:px-24 transform transition-transform duration-500 ease-in-out z-40 bg-white",
 					{
 						"translate-x-0": open,
 						"-translate-x-full md:translate-x-0": !open,
