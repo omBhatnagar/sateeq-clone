@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/logo-dark.png";
+import LoginModal from "../LoginModal";
 
 const Footer = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<div className='bg-[rgba(200,210,255,.15)] px-10 py-6 pb-20'>
 			<div className='flex flex-col md:flex-row'>
@@ -14,12 +18,13 @@ const Footer = () => {
 						<p>All Rights Reserved </p>
 					</div>
 				</div>
+				<LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
 				<div className='grid grid-cols-2 md:grid-cols-4 mt-6 w-5/6 mx-auto gap-5'>
 					<div className=''>
 						<h2 className='text-media-grey text-lg font-semibold'>Investors</h2>
-						<NavLink to='/login'>
+						<div onClick={() => setIsOpen(true)} className='cursor-pointer'>
 							<p className='text-footer-p text-sm leading-7 mt-4'>Login</p>
-						</NavLink>
+						</div>
 						<NavLink to='/invest'>
 							<p className='text-footer-p text-sm leading-7 mt-4'>Invest</p>
 						</NavLink>

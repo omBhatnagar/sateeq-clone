@@ -87,18 +87,21 @@ const FormInput = ({
 				);
 			case "phone":
 				return (
-					<div className='flex justify-center items-center w-full'>
-						<div>+91</div>
-						<Input
-							type='tel'
-							value={value}
-							placeholder={placeholder}
-							_placeholder={placeholderStyle}
-							required={required}
-							onChange={(e) => setValue(e.target.value)}
-							size={size}
-							// isInvalid={isInvalid ? !value : false}
-						/>
+					<div className='flex justify-between items-center w-full border border-slate-200 pl-1 pr-4 py-2 rounded-md'>
+						<span className='pr-1'>+91 </span>
+						<div className='flex-1'>
+							<input
+								type='tel'
+								value={value}
+								placeholder={placeholder}
+								_placeholder={placeholderStyle}
+								required={required}
+								onChange={(e) => setValue(e.target.value)}
+								className='outline-none'
+								size={size}
+								// isInvalid={isInvalid ? !value : false}
+							/>
+						</div>
 					</div>
 				);
 			default:
