@@ -1,11 +1,13 @@
-import {
-	Input,
-	InputGroup,
-	InputLeftAddon,
-	Textarea,
-	Radio,
-	RadioGroup,
-} from "@chakra-ui/react";
+// import {
+// 	Input,
+// 	InputGroup,
+// 	InputLeftAddon,
+// 	Textarea,
+// 	Radio,
+// 	RadioGroup,
+// } from "@chakra-ui/react";
+
+import { Input, Radio, Textarea } from "@mantine/core";
 
 const FormInput = ({
 	value,
@@ -25,12 +27,11 @@ const FormInput = ({
 				return (
 					<Input
 						placeholder={placeholder}
-						_placeholder={placeholderStyle}
 						value={value}
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
 						size={size}
-						isInvalid={isInvalid ? !value : false}
+						invalid={isInvalid ? !value : false}
 					/>
 				);
 			case "number":
@@ -45,7 +46,7 @@ const FormInput = ({
 						}
 						required={required}
 						size={size}
-						isInvalid={isInvalid ? !value : false}
+						invalid={isInvalid ? !value : false}
 					/>
 				);
 			case "email":
@@ -58,19 +59,19 @@ const FormInput = ({
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
 						size={size}
-						isInvalid={isInvalid ? !value : false}
+						invalid={isInvalid ? !value : false}
 					/>
 				);
 			case "radio":
 				return (
-					<RadioGroup
+					<Radio.Group
 						onChange={(e) => setValue(e)}
 						value={value}
 						className='flex gap-3'
 					>
-						<Radio value={"true"}>Yes</Radio>
-						<Radio value={"false"}>No</Radio>
-					</RadioGroup>
+						<Radio value={"true"} label='Yes' />
+						<Radio value={"false"} label='No' />
+					</Radio.Group>
 				);
 			case "textarea":
 				return (
@@ -81,13 +82,13 @@ const FormInput = ({
 						onChange={(e) => setValue(e.target.value)}
 						required={required}
 						size={size}
-						isInvalid={isInvalid ? !value : false}
+						invalid={isInvalid ? !value : false}
 					/>
 				);
 			case "phone":
 				return (
-					<InputGroup>
-						<InputLeftAddon children='+91' />
+					<div className='flex justify-center items-center w-full'>
+						<div>+91</div>
 						<Input
 							type='tel'
 							value={value}
@@ -98,7 +99,7 @@ const FormInput = ({
 							size={size}
 							// isInvalid={isInvalid ? !value : false}
 						/>
-					</InputGroup>
+					</div>
 				);
 			default:
 				return;

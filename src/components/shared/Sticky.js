@@ -4,9 +4,11 @@ const Sticky = ({ isHome }) => {
 	return (
 		<div>
 			<div className='fixed bottom-[40px] right-[20px] z-50 '>
-				<div className='w-[60px] h-[60px] bg-[#25d366] shadow-whatsapp-shadow rounded-full flex justify-center items-center'>
-					<i class='fa-brands fa-whatsapp fa-2xl text-white'></i>
-				</div>
+				<a href='https://api.whatsapp.com/send/?phone=%2B918882725419&text=Hi%20Sateeq%20👋🏻,%20%20I%20Want%20to%20know%20more&type=phone_number'>
+					<div className='w-[60px] h-[60px] bg-[#25d366] shadow-whatsapp-shadow rounded-full flex justify-center items-center'>
+						<i class='fa-brands fa-whatsapp fa-2xl text-white'></i>
+					</div>
+				</a>
 			</div>
 			{isHome && (
 				<NavLink to='/signup'>

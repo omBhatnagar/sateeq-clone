@@ -1,15 +1,20 @@
 import companyLogo from "../../images/logo-dark.svg";
 import { NavLink } from "react-router-dom";
 import cx from "classnames";
+import { useState } from "react";
+import LoginModal from "../LoginModal";
 
-const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
+const NavbarAlt = ({ theme, open, isOpen }) => {
+	const [isOpened, setIsOpened] = useState(false);
 	const MenuClasses = cx({
 		"text-black": theme === "light",
 	});
-
 	const Logo = companyLogo;
+
+	const handleModal = () => setIsOpened(true);
 	return (
 		<div>
+			<LoginModal isOpen={isOpened} setIsOpen={setIsOpened} />
 			<div
 				className={cx(
 					"transform transition-transform duration-500 ease-in-out md:hidden bg-white",
@@ -137,11 +142,12 @@ const NavbarAlt = ({ theme, accent, open, isOpen, logo2 }) => {
 							</NavLink>
 						</li>
 						<li className='mt-3 md:mt-0 md:order-2 md:pl-8'>
-							<NavLink to='/login'>
-								<div className='font-semibold text-lg md:text-base w-full mx-auto border border-nav-blue rounded-lg px-4 py-4 md:border-none text-nav-blue md:text-black text-center'>
-									Login
-								</div>
-							</NavLink>
+							<div
+								onClick={handleModal}
+								className='font-semibold text-lg md:text-base w-full mx-auto border border-nav-blue rounded-lg px-4 py-4 md:border-none text-nav-blue md:text-black text-center cursor-pointer'
+							>
+								Login
+							</div>
 						</li>
 					</ul>
 				</div>

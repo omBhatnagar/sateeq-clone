@@ -30,10 +30,12 @@ const Faqs = () => {
 					We have already curated some of the common asked questions for you
 				</p>
 				<div className='mt-4 w-2/3 md:w-5/6 font-semibold text-lg mx-auto bg-nav-blue rounded-lg px-3 py-4 md:px-8 md:py-3 lg:w-5/6 xl:w-full md:mx-0 text-white text-center mb-6'>
-					<div className='flex justify-center items-center gap-4'>
-						<span className='whitespace-nowrap'>Contact Us </span>
-						<img src={envelope} alt='envelope' />
-					</div>
+					<a href='https://api.whatsapp.com/send/?phone=%2B918882725419&text=Hi%20Sateeq%20👋🏻,%20%20I%20Want%20to%20know%20more&type=phone_number'>
+						<div className='flex justify-center items-center gap-4'>
+							<span className='whitespace-nowrap'>Contact Us </span>
+							<img src={envelope} alt='envelope' />
+						</div>
+					</a>
 				</div>
 			</div>
 			<div className='w-11/12 mx-auto md:w-7/12'>

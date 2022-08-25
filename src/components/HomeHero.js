@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import LoginModal from "./LoginModal";
 
 const HomeHero = ({
 	line1,
@@ -11,6 +13,7 @@ const HomeHero = ({
 	img,
 	url,
 }) => {
+	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div className=' md:mt-10 flex flex-col items-center md:flex-row md:px-10 w-11/12 mx-auto'>
 			<div className='xl:w-5/12 md:pt-5 lg:pb-20'>
@@ -40,13 +43,20 @@ const HomeHero = ({
 					</div>
 				</NavLink>
 				{isLogin && (
-					<p className='text-center md:text-left mt-6 text-hero-p'>
-						Already a member?
-						<NavLink to='/login'>
-							<span className='font-bold text-black'> Login</span>
-						</NavLink>
-					</p>
+					<>
+						<p className='text-center md:text-left mt-6 text-hero-p'>
+							Already a member?
+							<span
+								onClick={() => setIsOpen(true)}
+								className='font-bold text-black'
+							>
+								{" "}
+								Login
+							</span>
+						</p>
+					</>
 				)}
+				<LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
 			</div>
 			<div className='xl:w-1/2 mx-auto'>
 				<img src={img} alt='' className='xl:w-11/12 ml-auto' />
